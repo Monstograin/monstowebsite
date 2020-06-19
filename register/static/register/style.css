@@ -1,0 +1,70 @@
+
+   body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    height:100vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+  
+    .container{
+        height:100%;
+        align-content: center;
+        text-align: center;
+       
+    }
+    #particles-js{
+       
+            
+            width: 100vw;
+            height: 400px;
+            background: linear-gradient(45deg,#f967d8 , #081866);
+            z-index: 9;
+       
+       
+
+    }
+    .card{
+height:480px;
+margin-top: auto;
+margin-bottom: auto;
+width:425px;
+background: rgba(247, 247, 247, 0.966) ;
+}
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.card-header h2{
+    text-align: center;
+color:#000000;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+}
+
+.btn_success:hover{
+color: black;
+background-color: white;
+}
+
+.card1{
+    height: 320px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background: rgba(247, 247, 247, 0.966) ;
+}

@@ -14,8 +14,8 @@ def register(request):
         else:
             for msg in form.errors:
                 a=form.errors[msg]
-            return render(request,'register/register.html',{"error":a})
+            return render(request,'register/register1.html',{"error":a})
     else:
         form=Registration()
 
-    return render(request,'register/register.html',{"form":form})
+    return render(request,'register/register1.html',{"form":form})
