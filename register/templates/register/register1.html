@@ -16,13 +16,14 @@
     padding:0;
 }
 #particles-js{
-    background-color:#000000;
+    background-color:rgba(5, 5, 5, 0.781) ;
     height:100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
     .container{
     height: 100%;
@@ -35,14 +36,14 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color:rgba(211, 202, 202, 0.5)!important;
+    background-color:  rgba(0, 0, 0, 0.473)!important;
   
     }
     
     .social_icon span{
     font-size: 60px;
     margin-left: 10px;
-    color: #FFC312;
+    color: #29c7ac;
     }
     .social_icon span:hover{
     color: white;
@@ -50,7 +51,9 @@
     }
     
     .card-header h3{
-    color: white;
+    color:  rgb(87, 248, 114);
+    text-align: center;
+    font-style: bold;
     }
     
     .social_icon{
@@ -61,7 +64,7 @@
     
     .input-group-prepend span{
     width: 50px;
-    background-color: #FFC312;
+    background-color:  rgb(87, 248, 114);;
     color: black;
     border:0 !important;
     }
@@ -83,23 +86,23 @@
     margin-right: 5px;
     }
     
-    .login_btn{
+    .btn-success{
     color: black;
-    background-color: #FFC312;
+    background-color:rgb(87, 248, 114); ;
     width: 100px;
     }
     
-    .login_btn:hover{
+    .btn-success:hover{
     color: black;
-    background-color: white;
+    background-color: whitesmoke;
     }
     
    .card1{
-    height: 325px;
+    height: 350px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(161, 161, 161, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.473)!important;
    }
 
    .links{
@@ -151,7 +154,7 @@
         </div>
           <input type="password" name="password2" class="textinput textInput form-control" required="" id="id_password2" placeholder="Repeat password"> <small id="hint_id_password2" class="form-text text-muted"></small> </div> 
   <div class="form-group">
-        <button type="submit" value="register"  class="btn float-center bg-warning">Register</button>
+        <button type="submit" value="register"  class="btn float-center btn-success">Register</button>
     </div>
     </form>
     {{ error }}
