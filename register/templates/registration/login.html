@@ -8,32 +8,18 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <style>
-    *{
+   *{
     margin: 0;
     padding:0;
 }
 #particles-js{
-    background-color:#000000;
+    background-color:rgba(5, 5, 5, 0.781) ;
     height:100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-#particles-js2{
-        position: absolute;
-        right: 0px;
-        width: 50%;
-        height: 100%;
-        background-color: #888;
-        background-image: url("");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
- }
-      
-
 
 
     .container{
@@ -47,14 +33,14 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color:  rgba(0, 0, 0, 0.473)!important;
   
     }
     
     .social_icon span{
     font-size: 60px;
     margin-left: 10px;
-    color: #FFC312;
+    color: #29c7ac;
     }
     .social_icon span:hover{
     color: white;
@@ -62,7 +48,9 @@
     }
     
     .card-header h3{
-    color: white;
+    color:  rgb(87, 248, 114);
+    text-align: center;
+    font-style: bold;
     }
     
     .social_icon{
@@ -73,7 +61,7 @@
     
     .input-group-prepend span{
     width: 50px;
-    background-color: #FFC312;
+    background-color:  rgb(87, 248, 114);;
     color: black;
     border:0 !important;
     }
@@ -95,23 +83,23 @@
     margin-right: 5px;
     }
     
-    .login_btn{
+    .btn-success{
     color: black;
-    background-color: #FFC312;
+    background-color:rgb(87, 248, 114); ;
     width: 100px;
     }
     
-    .login_btn:hover{
+    .btn-success:hover{
     color: black;
-    background-color: white;
+    background-color: whitesmoke;
     }
     
    .card1{
-    height: 325px;
+    height: 350px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(161, 161, 161, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.473)!important;
    }
 
    .links{
@@ -130,7 +118,7 @@
         <div class="d-flex justify-content-center h-100">
             <div class="card1">
                 <div class="card-header">
-                    <h3><strong>Login</strong></h3>
+                    <h3><strong>𝕸𝖔𝖓𝖘𝖙𝖔𝖌𝖗𝖆𝖎𝖓</strong></h3>
                 </div>
                 <div class="card-body">
 <form method="post" class="from-group">
@@ -157,7 +145,7 @@
     
     </form>
     </div>
-            
+          {{ error }}   
     <div class="card-footer">
         <div class="d-flex justify-content-center links">
             Don't have an account?<a href="/register">Register</a>
@@ -167,7 +155,7 @@
         </div>
         </div>
     
-         {{ error }}
+        
          </div>
     <script >
         /* -----------------------------------------------
