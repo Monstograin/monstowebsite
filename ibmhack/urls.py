@@ -22,4 +22,6 @@ urlpatterns = [
     path('register/',include("register.urls")),
     path('',include('django.contrib.auth.urls')),
     path('',include('visualization.urls')),
+    path('livedata/',include('livedata.urls'))
+    
 ]

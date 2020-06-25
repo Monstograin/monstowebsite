@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'register.apps.RegisterConfig',
-    'visualization.apps.VisualizationConfig'
+    'visualization.apps.VisualizationConfig',
+    'livedata.apps.LivedataConfig'
 ]
 
 MIDDLEWARE = [
