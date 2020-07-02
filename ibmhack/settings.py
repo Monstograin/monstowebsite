@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'register.apps.RegisterConfig',
     'visualization.apps.VisualizationConfig',
-    'livedata.apps.LivedataConfig'
+    'livedata.apps.LivedataConfig',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/admin'
+LOGIN_REDIRECT_URL ='http://127.0.0.1:8000/'
 
 LOGOUT_REDIRECT_URL = '/login'
 

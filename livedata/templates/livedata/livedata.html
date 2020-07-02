@@ -62,6 +62,8 @@ background: #555856;
 </head>
 <body>
 
+{% if user.is_authenticated %}
+
 	<div class="clearfix">
 		<div class="box" >
 			<p class="text">Temperature:{{temp}}</p>
@@ -160,6 +162,9 @@ var chart = new Chart(ctx, {
 
             </div>
         </div>
+{% else %}
+<h1 class= text-white>Please login</h1>
+{% endif %}
  </div>
 
 </body>

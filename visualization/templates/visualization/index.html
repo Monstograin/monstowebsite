@@ -14,6 +14,7 @@
 </style>
 </head>
 <body>
+{% if user.is_authenticated %}
     <div class="container">
         <div>
  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://yuvateja01.github.io/htmlplotly/chart1.html" 
@@ -39,6 +40,9 @@
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://yuvateja01.github.io/htmlplotly/chart4.html" 
 height="400" width="100%"></iframe>
 </div>
+{% else %}
+<h1 class= text-white>Please login</h1>
+{% endif %}
 
 </div>
 </body>

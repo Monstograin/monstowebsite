@@ -8,8 +8,8 @@ def index(request):
 	rspdata=client['rspdata']
 	my_document = rspdata["rspdata"]
 	temp=my_document["temperature"][0]
-	humi=print(my_document["humidity"][0])
-	co2=print(my_document["co2"][0])
+	humi=my_document["humidity"][0]
+	co2=my_document["co2"][0]
 	a=my_document["temperature"]
 	b=my_document["humidity"]
 	c=my_document["co2"]
