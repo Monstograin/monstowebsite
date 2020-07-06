@@ -63,6 +63,7 @@
 </style>
 </head>
 <body>
+    {% if user.is_authenticated %}
     <nav class="navbar  fixed-top navbar-expand-md navbar-light bg-light">
         <a href="#home" class="navbar-brand"><h4><span>MONSTOGRAIN</span></h4></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -71,23 +72,23 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ml-auto">
-                <a href="#" class="nav-item nav-link active"><i class="fa fa-home"> Home</i></a>
+                <a href="/" class="nav-item nav-link active"><i class="fa fa-home"> Home</i></a>
                 
-                <a href="#" class="nav-item nav-link "><i class="fa fa-dashboard"> Dashboard</i></a>
-                <a href="./livedata.html" class="nav-item nav-link "><i class="fa fa-heartbeat"> Livedata</i></a>
-                <a href="#contact" class="nav-item nav-link"><i class="fa fa-address-book"> Contact</i></a>
+                <a href="/visualize" class="nav-item nav-link "><i class="fa fa-dashboard"> Dashboard</i></a>
+                <a href="/livedata" class="nav-item nav-link "><i class="fa fa-heartbeat"> Livedata</i></a>
+                <a href="/#contact" class="nav-item nav-link"><i class="fa fa-address-book"> Contact</i></a>
                 <div class="nav-item dropdown">
                     <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      <i class=" fa fa-user-o"> Login</i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#"><i class="fa fa-user-circle" > Login</i></a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-sign-in"> Register</i></a>
-                      
+                      <a class="dropdown-item" href="/login"><i class="fa fa-user-circle" > Login</i></a>
+                      <a class="dropdown-item" href="/register"><i class="fa fa-sign-in"> Register</i></a>
+                      <a class="dropdown-item" href="/logout"><i class="fa fa-sign-in"> Logout</i></a>  
                 </div>
                 </div>
             
-                <a href="#team" class="nav-item nav-link"><i class="fa fa-group"> Team</i></a>
+                <a href="/#team" class="nav-item nav-link"><i class="fa fa-group"> Team</i></a>
         
                   </div>
             </div>
@@ -118,10 +119,10 @@
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://yuvateja01.github.io/htmlplotly/chart4.html" 
 height="400" width="100%"></iframe>
 </div>
-{% else %}
+{% else %}\
 <script>
-    location.replace("./Login.html")
-</script>
+     location.replace('/login')
+ </script>
 {% endif %}
 </div>
 </body>
