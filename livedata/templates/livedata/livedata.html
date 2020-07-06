@@ -1,52 +1,233 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	   <meta http-equiv="x-ua-compatible" content="ie=edge">
-	   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <style>
-    body{
-        margin-top: 50px;
-        background-color: black;
-    }
-    * {
-  box-sizing: border-box;
+  body
+	{
+ 		background: #303030;
+     color: #ffffff;
+     margin-top: 80px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		overflow-x: hidden; 
+  }
+h4 span{
+  color: #28a7e9;
+		font-weight: bold;
+}
+  
+.navbar-default
+	{
+		background: #fff;
+		border: none;
+		box-shadow: none;
+		margin: 0 !important;
+	}
+.navbar-default .navbar-brand
+	{
+		font-weight: 500;
+		font-size: 30px;
+		height: 70px;
+		line-height: 40px;
+		padding: 12px 0px 0px 12px;
+	}
+.navbar-default .navbar-nav li a
+	{
+		font-weight: bold;
+		font-size: 13px;
+		height: 70px;
+		line-height: 40px;
+	}
 
+.navbar-default .navbar-nav > li > a.current { 
+	color: #28A7E9; 
 }
+.templatemo-nav {
+	border-radius: 0;	
+	width: 100%;
+	z-index: 1000;
+}
+.sticky {	
+	position: fixed;
+	left: 0;
+	top: 0;	
+}
+/* end navigation */
+  h4 span{
+    color: #28a7e9;
+		font-weight: bold;
+  }
 
-.text{
-    text-align: center;
-    color: solid black;
-}
-.row>div>h2{
-    text-shadow: 2px 2px 5px rgb(114, 114, 114);
-    text-transform: capitalize;
-}
+  h2
+	{
+		text-align: center;
+		font-size: 40px;
+		padding-bottom: 40px;
+	}	
+h2 span
+	{
+		color: #28a7e9;
+		font-weight: bold;
+	}
+  #data .media-heading-wrapper
+	{
+    padding-bottom: 32px;
+    padding-top: 20px;
+	}
+#data .media-heading-wrapper .fa
+	{
+		border: 1px solid #fff;
+		border-radius: 2px;
+		color: #fff;
+		font-size: 24px;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-right: 20px;
+	}
+#about .media-heading-wrapper h3
+	{
+		font-size: 18px;
+		font-weight: bold;
+		padding-top: 20px;
+		padding-left: 52px;
+	}
+#data .col-md-4:hover
+	{
+		background: #505050;
+	}
+#data .active
+	{
+		background: #505050;
+		padding: 40px;
+	}
+
+#data h3
+	{
+		color: #28a7e9;
+		font-weight: 600;
+		padding-top: 10px;
+		padding-bottom: 14px;
+  }
+#graph .card{
+    background-color: #303030;
+    margin-top: 50px;
+  }
+#graph h4{
+    color: #28a7e9;
+		font-weight: 600;
+		text-align: center;
+  }
+
+
+
 </style>
 </head>
 <body>
+  <nav class="navbar  fixed-top navbar-expand-md navbar-light bg-light">
+    <a href="#home" class="navbar-brand"><h4><span>MONSTOGRAIN</span></h4></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ml-auto">
+        <a href="#" class="nav-item nav-link "><i class="fa fa-home"> Home</i></a>
+        
+        <a href="#" class="nav-item nav-link "><i class="fa fa-dashboard"> Dashboard</i></a>
+        <a href="./livedata.html" class="nav-item nav-link active"><i class="fa fa-heartbeat"> Livedata</i></a>
+        <a href="#contact" class="nav-item nav-link"><i class="fa fa-address-book"> Contact</i></a>
+        <div class="nav-item dropdown">
+          <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <i class=" fa fa-user-o"> Login</i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><i class="fa fa-user-circle" > Login</i></a>
+            <a class="dropdown-item" href="#"><i class="fa fa-sign-in"> Register</i></a>
+            
+        </div>
+        </div>
+      
+        <a href="#team" class="nav-item nav-link"><i class="fa fa-group"> Team</i></a>
+    
+          </div>
+      </div>
+    
+  </nav>
+	<section id="data">
     <div class="container">
-    <div class="row">
-        <div class="col-sm-4" style="background-color:rgb(182, 182, 182); padding: 50px;margin-bottom: 90px; ">
-          <h2  class="text" style="font-size:x-large">Temperature</h2>
-          <p  class="text" style="font-size:large;">{{temp}}</p>
+      <div class="row">
+        <div class="col-md-12">
+            <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>LIVEDATA</span></h2>
+          </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
+          <div class="media">
+            <div class="media-heading-wrapper">
+              <div class="media-object pull-left">
+                <i class="fa fa-thermometer"></i>
+              </div>
+            </div>
+            <div class="media-body">
+              <h3>Temperature</h3>
+              <p>{{temp}}</p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-4" style="background-color:rgb(196, 196, 196);padding: 50px;margin-bottom: 90px;">
-          <h2  class="text" style="font-size:x-large">Humidity</h2>
-          <p  class="text" style="font-size:large;">{{humi}}</p>
+        <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.9s">
+          <div class="media">
+            <div class="media-heading-wrapper">
+              <div class="media-object pull-left">
+                <i class="fa fa-sun-o"></i>
+              </div>
+              
+            </div>
+            <div class="media-body">
+              <h3>Humidity</h3>
+              <p>{{humi}}</p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-4" style="background-color:rgb(204, 202, 202);padding: 50px;margin-bottom: 90px;">
-          <h2  class="text" style="font-size:x-large">CO2</h2>
-          <p  class="text" style="font-size:large;">{{co2}}</p>
+        <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+          <div class="media">
+            <div class="media-heading-wrapper">
+              <div class="media-object pull-left">
+                <i class="fa fa-warning"></i>
+              </div>
+              
+            </div>
+            <div class="media-body">
+              <h3>CO2</h3>
+              <p>{{co2}}</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-            <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </section>
+<section id="graph">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    <div class="card">
+        <div class="card-header"><h4>Temperature Plot</h4></div>
+        <div class="card-body">
+          <canvas id="myChart"></canvas>
             <script type="text/javascript">
       var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -66,13 +247,15 @@ data: {
     
 // Configuration options go here
 options: {}
-});
-
-  </script></div>
-
-        
-        <div class="col-md-4">
-            <canvas id="Chart"></canvas>
+});</script>
+       </div> 
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header"><h4>Humidity plot</h4></div>
+        <div class="card-body">
+          <canvas id="Chart"></canvas>
             <script type="text/javascript">
       var ctx = document.getElementById('Chart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -95,12 +278,14 @@ options: {}
 });
 
   </script>
-
         </div>
-    
-    
-        <div class="col-md-4">
-            <canvas id="co2"></canvas>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header"><h4>CO2 Plot</h4></div>
+        <div class="card-body">
+          <canvas id="co2"></canvas>
             <script type="text/javascript">
       var ctx = document.getElementById('co2').getContext('2d');
 var chart = new Chart(ctx, {
@@ -111,7 +296,7 @@ type: 'line',
 data: {
     labels: ['1', '2', '3', '4', '5'],
     datasets: [{
-        label: 'co2 plot',
+        label: 'Co2 plot',
         backgroundColor: '#23BCD5',
         borderColor: '#23BCD5',
         data: {{ graphco2 }}
@@ -123,11 +308,16 @@ options: {}
 });
 
   </script>
-
         </div>
       </div>
-      </div>
+    </div>
+    
+
+  </div>
+  </div>
+ 
+
+</section>  
 </body>
 </head>
 </html>
-
