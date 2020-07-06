@@ -10,7 +10,7 @@ def register(request):
         form=Registration(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/admin')
+            return redirect('http://127.0.0.1:8000')
         else:
             for msg in form.errors:
                 a=form.errors[msg]
