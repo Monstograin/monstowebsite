@@ -129,7 +129,7 @@
                 </div>
                 <div class="card-body">
   <form method="POST" class="form-group">
-  {% csrf_token %} 
+ 	{% csrf_token %}
   <div id="div_id_username" class="input-group form-group" class="form-group" >
         <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-user"></i>
@@ -161,6 +161,7 @@
     </div>
     </form>
     <ul class="errorlist text-white">{{ error}}</ul>
+    <p class=text-white>{{confirmmsg}}</p>
     </div>
 
     <div class="card-footer">
