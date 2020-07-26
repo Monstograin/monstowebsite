@@ -23,5 +23,6 @@ urlpatterns = [
     path('',include('django.contrib.auth.urls')),
     path('visualize/',include('visualization.urls')),
     path('livedata/',include('livedata.urls')),
+    path('predictions/',include('mlmodel.urls')),
     path('',include('home.urls'))
 ]

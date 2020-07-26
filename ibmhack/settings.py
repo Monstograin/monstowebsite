@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'visualization.apps.VisualizationConfig',
     'livedata.apps.LivedataConfig',
-    'home.apps.HomeConfig'
+    'home.apps.HomeConfig',
+    'mlmodel.apps.MlmodelConfig'
 ]
 
 MIDDLEWARE = [
