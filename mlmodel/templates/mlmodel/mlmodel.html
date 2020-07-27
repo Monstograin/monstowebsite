@@ -1,5 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	   <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<style>
+    
+body
+	{
+ 		background: #303030;
+     color: #ffffff;
+     margin-top: 80px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		overflow-x: hidden; 
+  }
+h4 span{
+  color: #28a7e9;
+		font-weight: bold;
+}
+  
+.navbar-default
+	{
+		background: #fff;
+		border: none;
+		box-shadow: none;
+		margin: 0 !important;
+	}
+.navbar-default .navbar-brand
+	{
+		font-weight: 500;
+		font-size: 30px;
+		height: 70px;
+		line-height: 40px;
+		padding: 12px 0px 0px 12px;
+	}
+.navbar-default .navbar-nav li a
+	{
+		font-weight: bold;
+		font-size: 13px;
+		height: 70px;
+		line-height: 40px;
+	}
+
+.navbar-default .navbar-nav > li > a.current { 
+	color: #28A7E9; 
+}
+.templatemo-nav {
+	border-radius: 0;	
+	width: 100%;
+	z-index: 1000;
+}
+.sticky {	
+	position: fixed;
+	left: 0;
+	top: 0;	
+}
+/* end navigation */
+#graph .card{
+    background-color: #303030;
+
+}
+#graph h4{
+    color: #28A7E9;
+    font-weight: bold;
+    text-align: center;
+}
+</style>
+</head>
 <body>
-<p>tgfryhu</p>
-</body>
-</html>
+ 
+  <nav class="navbar  fixed-top navbar-expand-md navbar-light bg-light">
+    <a href="#home" class="navbar-brand"><h4><span>MONSTOGRAIN</span></h4></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ml-auto">
+        <a href="/home" class="nav-item nav-link "><i class="fa fa-home"> Home</i></a>
+        
+        <a href="/visualize" class="nav-item nav-link "><i class="fa fa-dashboard"> Dashboard</i></a>
+        <a href="/livedata" class="nav-item nav-link active"><i class="fa fa-heartbeat"> Livedata</i></a>
+        <a href="/#contact" class="nav-item nav-link"><i class="fa fa-address-book"> Contact</i></a>
+        <div class="nav-item dropdown">
+          <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <i class=" fa fa-user-o"> Login</i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/login"><i class="fa fa-user-circle" > Login</i></a>
+            <a class="dropdown-item" href="/register"><i class="fa fa-sign-in"> Register</i></a>
+            <a class="dropdown-item" href="/logout"><i class="fa fa-sign-in"> Logout</i></a>
+            
+        </div>
+        </div>
+      
+        <a href="#team" class="nav-item nav-link"><i class="fa fa-group"> Team</i></a>
+    
+          </div>
+      </div>
+    
+  </nav>
+  <section id="graph">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        <div class="card">
+            <div class="card-header"><h4>Prediction Plot</h4></div>
+            <div class="card-body">
+              <canvas id="myChart"></canvas>
+                <script type="text/javascript">
+          var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+    // The data for our dataset
+    data: {
+        labels: ['33', '72', '55', '64', '78'],
+        datasets: [{
+            label: 'prediction plot',
+            backgroundColor: '#23BCD5',
+            borderColor: '#23BCD5',
+            data: [587,534,389,430,445]
+        }]
+    },
+        
+    // Configuration options go here
+    options: {}
+    });</script>
+           </div> 
+          </div>
+        </div>
+        </div>
+        </div>
+        
+
+  </section>
+  </body>
+  
+  </html>
+

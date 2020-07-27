@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import ibmdb2
 from pandas import DataFrame
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
